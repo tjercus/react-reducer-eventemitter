@@ -56,10 +56,10 @@ class App extends Component {
         </header>
         <p><em>Your order was:</em> {this.state.order}</p>
 
-        <button onClick={this.onButtonClick} value="hamburger">
+        <button onClick={this.onButtonClick} value="hamburger" className="waves-effect waves-light btn-large red">
           order hamburger
         </button>
-        <button onClick={this.onButtonClick} value="fries">
+        <button onClick={this.onButtonClick} value="fries" className="waves-effect waves-light btn-large blue">
           order fries
         </button>
       </div>

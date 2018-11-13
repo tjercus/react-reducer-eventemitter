@@ -21,3 +21,7 @@
 em {
   font-weight: bold;
 }
+
+button {
+  margin-right: 0.3em;
+}
