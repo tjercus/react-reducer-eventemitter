@@ -13,10 +13,12 @@ const reducerFn = (state, action) => {
   }
 };
 
+/**
+ * Generic store, can be used anywhere to store any tree
+ */
 class Store {
-  state = {
-    order: null
-  };
+  // no default state needed, the reducerFn will decide what is stored
+  state = {};
 
   constructor(reducerFn) {
     eventEmitter.on("UPDATE_STORE_CMD", action => {
@@ -28,6 +30,7 @@ class Store {
   }
 }
 
+// create the store, it's input and output are handled via the eventbus/emitter
 new Store(reducerFn);
 
 class App extends Component {
